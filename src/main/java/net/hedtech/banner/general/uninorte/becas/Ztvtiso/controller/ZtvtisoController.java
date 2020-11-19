@@ -93,7 +93,7 @@ public class ZtvtisoController extends DefaultBlockController {
 			if(rs != null) {
 				z.setZtvtisoCodSol(rs.getNumber(0));
 			} else {
-				errorMessage("Error: No genero el codigo solicitud consecutivo");
+				errorMessage("Error: No genero el codigo solicitud consecutivoooooo");
 				throw new ApplicationException();
 			}
 		}
