@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="ZTVCONV.Manager.Config" name="ZTVCONV">
+		<items>
+			<item name="ZTVCONV_CATEGORIA" logicalName="ztvconvCategoria" type="java.lang.String" physicalName="ZTVCONV_CATEGORIA" key="true">
+				<value>
+					<constant>BE</constant>
+				</value>
+			</item>
+			<item name="ZTVCONV_TIPO" logicalName="ztvconvTipo" type="java.math.BigDecimal" physicalName="ZTVCONV_TIPO" key="true">
+				<value>
+					<item name="COD_BECA" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="ZTVCONV_COD_SOL" logicalName="ztvconvCodSol" type="java.math.BigDecimal" physicalName="ZTVCONV_COD_SOL" key="true">
+				<value>
+					<item name="COD_TIPO_SOLICITUD" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="ZTVCONV_COD_CONV" logicalName="ztvconvCodConv" type="java.math.BigDecimal" physicalName="ZTVCONV_COD_CONV" key="true">
+			</item>
+			<item name="ZTVCONV_F_INICIO" logicalName="ztvconvFInicio" type="java.util.Date" physicalName="ZTVCONV_F_INICIO">
+			</item>
+			<item name="ZTVCONV_F_FIN" logicalName="ztvconvFFin" type="java.util.Date" physicalName="ZTVCONV_F_FIN">
+			</item>
+			<item name="ZTVCONV_ESTADO" logicalName="ztvconvEstado" type="java.lang.String" physicalName="ZTVCONV_ESTADO">
+			</item>
+			<item name="ZTVCONV_USUARIO" logicalName="ztvconvUsuario" type="java.lang.String" physicalName="ZTVCONV_USUARIO">
+			</item>
+			<item name="ZTVCONV_FECHA_MOD" logicalName="ztvconvFechaMod" type="java.util.Date" physicalName="ZTVCONV_FECHA_MOD">
+			</item>
+			<item name="ZTVCONV_DESC_CONV" logicalName="ztvconvDescConv" type="java.lang.String" physicalName="ZTVCONV_DESC_CONV">
+			</item>
+			<item name="ZTVCONV_PERIODO" logicalName="ztvconvPeriodo" type="java.lang.String" physicalName="ZTVCONV_PERIODO">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.uninorte.becas.Ztvconv.model.ZtvconvAdapter</adapterClass>
+		
+		<pagination enabled="true" maximumRows="30"/>
+		
+		
+		
+	</manager>
+</b:beans>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="TIPO_SOLICITUD.ValueSet.Config" name="TIPO_SOLICITUD">
+		<columns>
+			<column name="ZTVTISO_TIPO" type="Number" size="0"/>
+			<column name="ZTVTISO_COD_SOL" type="Number" size="0"/>
+			<column name="ZTVTISO_SOLICITUD" type="String" size="100"/>
+		</columns>
+		<query><![CDATA[select z.ztvtiso_tipo,z.ztvtiso_cod_sol,z.ztvtiso_solicitud FROM ZTVTISO z
+		]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="PERIODOS.ValueSet.Config" name="PERIODOS">
+		<columns>
+			<column name="STVTERM_CODE" type="String" size="6"/>
+		</columns>
+		<query><![CDATA[select s.stvterm_code from STVTERM s  where s.stvterm_code not in ('999999','999996','999995','999994') order by s.stvterm_code desc]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="TIPO_SOLICITUD" Height="500" UseHeight="true" Width="400" UseWidth="true" Name="LOV_TIPO_SOLICITUD">
+        <Columns>
+            <Column ReturnItem="KEY_BLOCK.COD_BECA" Visible="false" Width="0" DataMember="ZTVTISO_TIPO"/>
+            <Column ReturnItem="KEY_BLOCK.COD_TIPO_SOLICITUD" Visible="false" Width="0" DataMember="ZTVTISO_COD_SOL"/>
+            <Column ReturnItem="KEY_BLOCK.TIPO_SOLICITUD" Width="50" DataMember="ZTVTISO_SOLICITUD"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="PERIODOS" Height="500" Width="400" Name="LOV_PERIODOS">
+        <Columns>
+            <Column ReturnItem="ZTVCONV.ZTVCONV_PERIODO" Width="50" DataMember="STVTERM_CODE"/>
+        </Columns>
+    </Lov>
+</Lovs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <interactionBlock name="ZTVCONV"/>
+    <panel class="StackedCanvas" id="MAIN_CANVAS" name="MAIN_CANVAS" width="100%">
+        <collapsiblepanel label="mainWindow.title" name="grdSzvpric" width="100%">
+            <gridview block="ZTVCONV" name="grdZtvconv" width="100%">
+                <viewheader>
+                    <viewcolumn datatype="String" label="Nombre de la Convocatoria" maxlength="200" member="ZTVCONV_DESC_CONV" name="ztvconvDescConv" required="true" width="500px"/>
+                    <viewcolumn datatype="Date" label="Fecha de Inicio" maxlength="1" member="ZTVCONV_F_INICIO" name="ztvconvFInicio" required="true" width="150px">
+                        <editor>
+                            <calendar name="" width="100px"/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="Date" label="Fecha de Fin" maxlength="1" member="ZTVCONV_F_FIN" name="ztvconvFFin" required="true" width="150px">
+                        <editor>
+                            <calendar name="" width="100px"/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="Periodo" maxlength="6" member="ZTVCONV_PERIODO" name="ztvconvPeriodo" required="true" width="50px">
+                        <editor>
+                            <lovbox/>
+                        </editor>
+                    </viewcolumn>
+                    <viewcolumn datatype="String" label="Estado" maxlength="1" member="ZTVCONV_ESTADO" name="ztvconvEstado" required="true" width="50px">
+                        <editor>
+                            <combobox falsevalue="" name="">
+                                <model>
+                                    <item label="Activo" value="A"/>
+                                    <item label="Inactivo" value="I"/>
+                                </model>
+                            </combobox>
+                        </editor>
+                    </viewcolumn>
+                    <!-- 					<viewcolumn label="Categoria" width="50px" required="true" maxlength="2" member="ZTVCONV_CATEGORIA" name="ztvconvCategoria" datatype="String"> -->
+                    <!-- 					</viewcolumn> -->
+                    <!-- 					<viewcolumn label="Tipo" width="50px" textalign="right" required="true" maxlength="1" member="ZTVCONV_TIPO" name="ztvconvTipo" datatype="Number"> -->
+                    <!-- 					</viewcolumn> -->
+                    <!-- 					<viewcolumn label="Cod Solicitud" width="50px" textalign="right" required="true" maxlength="1" member="ZTVCONV_COD_SOL" name="ztvconvCodSol" datatype="Number"> -->
+                    <!-- 					</viewcolumn> -->
+                    <!-- 					<viewcolumn label="Cod Convocatoria" width="50px" textalign="right" required="true" maxlength="1" member="ZTVCONV_COD_CONV" name="ztvconvCodConv" datatype="Number"> -->
+                    <!-- 					</viewcolumn> -->
+                    <!-- 					<viewcolumn label="Usuario" width="105px" required="true" maxlength="15" member="ZTVCONV_USUARIO" name="ztvconvUsuario" datatype="String"> -->
+                    <!-- 					</viewcolumn> -->
+                    <!-- 					<viewcolumn label="Fecha Mod" width="50px" required="true" maxlength="1" member="ZTVCONV_FECHA_MOD" name="ztvconvFechaMod" datatype="Date"> -->
+                    <!-- 						<editor> -->
+                    <!-- 							<calendar name="" width="100px"  /> -->
+                    <!-- 						</editor> -->
+                    <!-- 					</viewcolumn> -->
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>

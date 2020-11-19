@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/uninorte/becas/Ztvconv/ZtvconvAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/general/uninorte/becas/Ztvconv/ZtvconvLovs.xml" Name="ZTVCONV">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/uninorte/becas/Ztvconv/views/ViewMainWindow">
+            <StackedCanvas Id="MAIN_CANVAS"/>
+            <ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+            <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="BUTTON_CONTROL_BLOCK">
+            <Item DataType="String" Id="CHECK_KEYS" Type="TextItem"/>
+        </Block>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="KEY_BLOCK">
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Id="X" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Type="Button" Visible="false"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="TIPO_SOLICITUD" Lov="LOV_TIPO_SOLICITUD" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="COD_TIPO_SOLICITUD" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="COD_BECA" Type="TextItem"/>
+        </Block>
+        <Block Id="ZTVCONV" MultiRecord="true">
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_DESC_CONV" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_F_INICIO" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_F_FIN" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_PERIODO" Lov="LOV_PERIODOS" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_ESTADO" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_CATEGORIA" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_TIPO" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_COD_SOL" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_COD_CONV" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_USUARIO" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVCONV_FECHA_MOD" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

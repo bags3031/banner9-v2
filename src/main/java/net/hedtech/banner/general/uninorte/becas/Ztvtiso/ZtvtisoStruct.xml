@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/uninorte/becas/Ztvtiso/ZtvtisoAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/general/uninorte/becas/Ztvtiso/ZtvtisoLovs.xml" Name="ZTVTISO">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/uninorte/becas/Ztvtiso/views/ViewMainWindow">
+            <StackedCanvas Id="MAIN_CANVAS"/>
+            <ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+            <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="BUTTON_CONTROL_BLOCK">
+            <Item DataType="String" Id="CHECK_KEYS" Type="TextItem"/>
+        </Block>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="KEY_BLOCK">
+            <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Id="TIPO" Lov="LOV_TIPO" Required="true" Type="TextItem"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Type="Button"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Type="Button" Visible="false"/>
+            <Item CanvasName="KEY_BLOCK_CANVAS" Id="CODE_TIPO" Type="TextItem"/>
+        </Block>
+        <Block Id="ZTVTISO" MultiRecord="true">
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_TIPO" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_SOLICITUD" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_TIPO_SOL" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_STVWAPP_CODE" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="TIPO_ADMISION_DESC" Lov="LOV_TIPO_ADMISION" Type="TextItem" ValidateFromList="true"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_INFORMACION" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_INSTRUCCIONES" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_DATOS_CORRESP" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_NOMBRE_FORMT" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_ESTADO" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_CATEGORIA" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_COD_SOL" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_USUARIO" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTISO_FECHA_MOD" Type="TextItem">
+                <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+            </Item>
+        </Block>
+        <Block Id="ZTBPRSO" MultiRecord="true">
+            <Item CanvasName="MAIN_CANVAS" Id="DESC_PROGRAMA" Lov="LOV_DESC_PROGRAMA" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTBPRSO_COD_SOL" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTBPRSO_TIPO" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTBPRSO_PROGRAMA" Type="TextItem"/>            
+            <Item CanvasName="MAIN_CANVAS" Id="ZTBPRSO_USUARIO" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTBPRSO_FECHA_MOD" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

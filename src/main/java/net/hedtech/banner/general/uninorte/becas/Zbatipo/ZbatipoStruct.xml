@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/uninorte/becas/Zbatipo/ZbatipoAlerts.xml" LovDataPath="/net/hedtech/banner/general/uninorte/becas/Zbatipo/ZbatipoLovs.xml" Name="ZBATIPO">
+    <Visual>
+        <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/uninorte/becas/Zbatipo/views/ViewMainWindow">
+            <StackedCanvas Id="MAIN_CANVAS"/>
+            <ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+            <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+        </Window>
+    </Visual>
+    <Logic>
+        <Block Id="BUTTON_CONTROL_BLOCK">
+            <Item DataType="String" Id="CHECK_KEYS" Type="TextItem"/>
+        </Block>
+        <Block Id="FORM_HEADER">
+            <Item DataType="String" Id="CURRENT_FORM" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_RELEASE" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_INSTITUTION" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_TIME" Type="TextItem"/>
+            <Item DataType="String" Id="CURRENT_DATE" Type="TextItem"/>
+            <Item DataType="String" Id="HEADER_FLAG" Type="TextItem"/>
+            <Item DataType="String" Id="WORKFLD" Type="TextItem"/>
+            <Item DataType="String" Id="WORKDATE" Type="TextItem"/>
+        </Block>
+        <Block Id="ZTVTIPO" MultiRecord="true">
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_CATEGORIA" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_TIPO" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_DESC_TIPO" Required="true" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_ESTADO" Required="true" Type="List"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_USUARIO" Type="DisplayItem">
+                <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+            </Item>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_FECHA_MOD" Type="DisplayItem">
+                <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+            </Item>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_ESTADO_S" Type="TextItem"/>
+            <Item CanvasName="MAIN_CANVAS" Id="ZTVTIPO_MENSAJE" Type="TextItem"/>
+        </Block>
+    </Logic>
+</FormStructure>

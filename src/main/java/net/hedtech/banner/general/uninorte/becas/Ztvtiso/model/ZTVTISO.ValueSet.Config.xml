@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+	
+	<valueSet id="TIPO.ValueSet.Config" name="TIPO">
+		<columns>
+			<column name="ZTVTIPO_TIPO" type="Number" size="0"/>
+			<column name="ZTVTIPO_DESC_TIPO" type="String" size="100"/>
+		</columns>
+		<query><![CDATA[select z.ztvtipo_tipo, z.ztvtipo_desc_tipo FROM ZTVTIPO z
+		
+		
+		]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="TIPO_ADMISION.ValueSet.Config" name="TIPO_ADMISION">
+		<columns>
+			<column name="STVADMT_CODE" type="String" size="2"/>
+			<column name="STVADMT_DESC" type="String" size="30"/>
+		</columns>
+		<query><![CDATA[select stvadmt_code, stvadmt_desc from stvadmt s
+		]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+	<valueSet id="DESC_PROGRAMA.ValueSet.Config" name="DESC_PROGRAMA">
+		<columns>
+			<column name="SMRPRLE_PROGRAM" type="String" size="12"/>
+			<column name="SMRPRLE_PROGRAM_DESC" type="String" size="30"/>
+		</columns>
+		<query><![CDATA[select e.smrprle_program,e.smrprle_program_desc FROM SMRPRLE e where e.smrprle_levl_code in ('PR','PG') order by e.smrprle_program_desc]]>
+		</query>
+		<parameters>
+		</parameters>
+	</valueSet>
+</b:beans>

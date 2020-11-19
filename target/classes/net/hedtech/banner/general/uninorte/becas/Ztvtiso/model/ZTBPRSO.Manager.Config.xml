@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="ZTBPRSO.Manager.Config" name="ZTBPRSO">
+		<items>
+			<item name="ZTBPRSO_COD_SOL" logicalName="ztbprsoCodSol" type="java.math.BigDecimal" physicalName="ZTBPRSO_COD_SOL" key="true">
+			</item>
+			<item name="ZTBPRSO_TIPO" logicalName="ztbprsoTipo" type="java.math.BigDecimal" physicalName="ZTBPRSO_TIPO" key="true">
+			</item>
+			<item name="ZTBPRSO_PROGRAMA" logicalName="ztbprsoPrograma" type="java.lang.String" physicalName="ZTBPRSO_PROGRAMA" key="true">
+			</item>
+			<item name="ZTBPRSO_USUARIO" logicalName="ztbprsoUsuario" type="java.lang.String" physicalName="ZTBPRSO_USUARIO">
+			</item>
+			<item name="ZTBPRSO_FECHA_MOD" logicalName="ztbprsoFechaMod" type="java.util.Date" physicalName="ZTBPRSO_FECHA_MOD">
+			</item>
+			<item name="DESC_PROGRAMA" logicalName="descPrograma" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.uninorte.becas.Ztvtiso.model.ZtbprsoAdapter</adapterClass>
+		
+		
+		
+		
+	</manager>
+</b:beans>

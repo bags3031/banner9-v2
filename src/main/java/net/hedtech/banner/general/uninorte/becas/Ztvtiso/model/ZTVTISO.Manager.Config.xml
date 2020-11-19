@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="ZTVTISO.Manager.Config" name="ZTVTISO">
+		<items>
+			<item name="ZTVTISO_CATEGORIA" logicalName="ztvtisoCategoria" type="java.lang.String" physicalName="ZTVTISO_CATEGORIA" key="true">
+			</item>
+			<item name="ZTVTISO_TIPO" logicalName="ztvtisoTipo" type="java.math.BigDecimal" physicalName="ZTVTISO_TIPO" key="true">
+				<copyValueFrom>
+					<item name="CODE_TIPO" businessObject="KEY_BLOCK"/>
+				</copyValueFrom>
+			</item>
+			<item name="ZTVTISO_COD_SOL" logicalName="ztvtisoCodSol" type="java.math.BigDecimal" physicalName="ZTVTISO_COD_SOL" key="true">
+			</item>
+			<item name="ZTVTISO_SOLICITUD" logicalName="ztvtisoSolicitud" type="java.lang.String" physicalName="ZTVTISO_SOLICITUD">
+			</item>
+			<item name="ZTVTISO_ESTADO" logicalName="ztvtisoEstado" type="java.lang.String" physicalName="ZTVTISO_ESTADO">
+			</item>
+			<item name="ZTVTISO_INFORMACION" logicalName="ztvtisoInformacion" type="java.lang.String" physicalName="ZTVTISO_INFORMACION">
+			</item>
+			<item name="ZTVTISO_INSTRUCCIONES" logicalName="ztvtisoInstrucciones" type="java.lang.String" physicalName="ZTVTISO_INSTRUCCIONES">
+			</item>
+			<item name="ZTVTISO_DATOS_CORRESP" logicalName="ztvtisoDatosCorresp" type="java.lang.String" physicalName="ZTVTISO_DATOS_CORRESP">
+			</item>
+			<item name="ZTVTISO_USUARIO" logicalName="ztvtisoUsuario" type="java.lang.String" physicalName="ZTVTISO_USUARIO">
+			</item>
+			<item name="ZTVTISO_FECHA_MOD" logicalName="ztvtisoFechaMod" type="java.util.Date" physicalName="ZTVTISO_FECHA_MOD">
+			</item>
+			<item name="ZTVTISO_STVWAPP_CODE" logicalName="ztvtisoStvwappCode" type="java.lang.String" physicalName="ZTVTISO_STVWAPP_CODE">
+			</item>
+			<item name="ZTVTISO_TIPO_SOL" logicalName="ztvtisoTipoSol" type="java.lang.String" physicalName="ZTVTISO_TIPO_SOL">
+			</item>
+			<item name="ZTVTISO_NOMBRE_FORMT" logicalName="ztvtisoNombreFormt" type="java.lang.String" physicalName="ZTVTISO_NOMBRE_FORMT">
+			</item>
+			<item name="TIPO_ADMISION_DESC" logicalName="tipoAdmisionDesc" type="String" virtual="true">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.uninorte.becas.Ztvtiso.model.ZtvtisoAdapter</adapterClass>
+		
+		
+		
+		
+	</manager>
+</b:beans>

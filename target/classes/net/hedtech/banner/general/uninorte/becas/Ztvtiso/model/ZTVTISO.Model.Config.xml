@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/ZTVTISO.Manager.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/KEY_BLOCK.Manager.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/FORM_HEADER.Manager.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/ZTBPRSO.Manager.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/ZTVTISO.ValueSet.Config.xml"/>
+	
+	<formModel id="ZTVTISO.Model.Config" name="ZTVTISO">
+		<modelClass>net.hedtech.banner.general.uninorte.becas.Ztvtiso.model.ZtvtisoModel</modelClass>
+		<parameters>
+		</parameters>
+		<businessObjects>
+			<businessObject name="ZTVTISO" manager="ZTVTISO.Manager.Config">
+			<associations>
+				<association child="ZTBPRSO">
+					<mapping parent="ZTVTISO_TIPO" child="ZTBPRSO_TIPO"/>
+					<mapping parent="ZTVTISO_COD_SOL" child="ZTBPRSO_COD_SOL"/>
+				</association>
+			</associations>
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+			</businessObject>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+			</businessObject>
+			<businessObject name="ZTBPRSO" manager="ZTBPRSO.Manager.Config">
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+			<valueSet config="TIPO.ValueSet.Config"/>
+			<valueSet config="TIPO_ADMISION.ValueSet.Config"/>
+			<valueSet config="DESC_PROGRAMA.ValueSet.Config"/>
+		</valueSets>
+	</formModel>
+</b:beans>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- base task definition -->
+	<b:import resource="classpath:/net/hedtech/general/common/forms/Base.Task.Config.xml"/>
+	<!-- task parts -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/Goqolib.TaskPart.Config.xml"/>
+	<!-- library resources -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<!-- model definition -->
+	<b:import resource="classpath:/net/hedtech/banner/general/uninorte/becas/Ztvtiso/model/ZTVTISO.Model.Config.xml"/>
+	
+	<task id="ZTVTISO.Task.Config" name="ZTVTISO">
+		<baseTaskConfiguration config="BASE.Task.Config"/>		
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.uninorte.becas.Ztvtiso.ZtvtisoTask</taskClass>		
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/uninorte/becas/Ztvtiso/ZtvtisoStruct.xml</taskResources>
+		
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.uninorte.becas.Ztvtiso.services.ZtvtisoServices</services>
+			<attachedLibraries>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		
+		<!-- model -->
+		<formModelConfiguration config="ZTVTISO.Model.Config"/>
+		
+		<formController>net.hedtech.banner.general.uninorte.becas.Ztvtiso.controller.ZtvtisoFormController</formController>
+		<blockControllers>
+			<block name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.general.uninorte.becas.Ztvtiso.controller.ButtonControlBlockController</block>
+			<block name="ZTVTISO">net.hedtech.banner.general.uninorte.becas.Ztvtiso.controller.ZtvtisoController</block>
+			<block name="KEY_BLOCK">net.hedtech.banner.general.uninorte.becas.Ztvtiso.controller.KeyBlockController</block>
+			<block name="FORM_HEADER">net.hedtech.banner.general.uninorte.becas.Ztvtiso.controller.FormHeaderController</block>
+			<block name="ZTBPRSO">net.hedtech.banner.general.uninorte.becas.Ztvtiso.controller.ZtbprsoController</block>
+		</blockControllers>
+	</task>
+</b:beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="ZTVTIPO.Manager.Config" name="ZTVTIPO">
+		<items>
+			<item name="ZTVTIPO_CATEGORIA" logicalName="ztvtipoCategoria" type="java.lang.String" physicalName="ZTVTIPO_CATEGORIA" key="true">
+			</item>
+			<item name="ZTVTIPO_TIPO" logicalName="ztvtipoTipo" type="java.math.BigDecimal" physicalName="ZTVTIPO_TIPO" key="true">
+			</item>
+			<item name="ZTVTIPO_DESC_TIPO" logicalName="ztvtipoDescTipo" type="java.lang.String" physicalName="ZTVTIPO_DESC_TIPO">
+			</item>
+			<item name="ZTVTIPO_ESTADO" logicalName="ztvtipoEstado" type="java.lang.String" physicalName="ZTVTIPO_ESTADO">
+			</item>
+			<item name="ZTVTIPO_USUARIO" logicalName="ztvtipoUsuario" type="java.lang.String" physicalName="ZTVTIPO_USUARIO">
+			</item>
+			<item name="ZTVTIPO_FECHA_MOD" logicalName="ztvtipoFechaMod" type="java.util.Date" physicalName="ZTVTIPO_FECHA_MOD">
+			</item>
+			<item name="ZTVTIPO_ESTADO_S" logicalName="ztvtipoEstadoS" type="java.lang.String" physicalName="ZTVTIPO_ESTADO_S">
+			</item>
+			<item name="ZTVTIPO_MENSAJE" logicalName="ztvtipoMensaje" type="java.lang.String" physicalName="ZTVTIPO_MENSAJE">
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.uninorte.becas.Zbatipo.model.ZtvtipoAdapter</adapterClass>
+		
+		<pagination enabled="true" maximumRows="20"/>
+		
+		
+		
+	</manager>
+</b:beans>

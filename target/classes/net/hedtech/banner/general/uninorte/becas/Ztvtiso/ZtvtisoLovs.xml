@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Lovs>
+    <Lov RecordGroup="TIPO" Height="500" UseHeight="true" Width="400" UseWidth="true" Name="LOV_TIPO">
+        <Columns>
+            <Column ReturnItem="KEY_BLOCK.CODE_TIPO" Visible="false" Width="0" DataMember="ZTVTIPO_TIPO"/>
+            <Column ReturnItem="KEY_BLOCK.TIPO" Width="50" DataMember="ZTVTIPO_DESC_TIPO"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="TIPO_ADMISION" Height="500" UseHeight="true" Width="400" UseWidth="true" Name="LOV_TIPO_ADMISION">
+        <Columns>
+            <Column ReturnItem="ZTVTISO.ZTVTISO_STVWAPP_CODE" Width="0" DataMember="STVADMT_CODE"/>
+            <Column ReturnItem="ZTVTISO.TIPO_ADMISION_DESC" Width="150" DataMember="STVADMT_DESC"/>
+        </Columns>
+    </Lov>
+    <Lov RecordGroup="DESC_PROGRAMA" Height="500" Width="400" Name="LOV_DESC_PROGRAMA">
+        <Columns>
+            <Column ReturnItem="ZTBPRSO.ZTBPRSO_PROGRAMA" Width="50" DataMember="SMRPRLE_PROGRAM"/>
+            <Column ReturnItem="ZTBPRSO.DESC_PROGRAMA" Width="50" DataMember="SMRPRLE_PROGRAM_DESC"/>
+        </Columns>
+    </Lov>
+</Lovs>

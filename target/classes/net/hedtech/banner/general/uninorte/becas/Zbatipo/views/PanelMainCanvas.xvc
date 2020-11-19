@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="horizontal">
+    <interactionBlock name="ZTVTIPO"/>
+    <panel class="StackedCanvas" id="MAIN_CANVAS" name="MAIN_CANVAS" width="100%">
+        <collapsiblepanel label="mainWindow.title" name="grdSzvpric" width="100%">
+            <gridview block="ZTVTIPO" name="grdZtvtipo" width="100%">
+                <viewheader>
+                    <!-- 				<viewcolumn label="Categoria" width="50px" required="true" maxlength="2" member="ZTVTIPO_CATEGORIA" name="ztvtipoCategoria" datatype="String"> -->
+                    <!-- 				</viewcolumn> -->
+                    <!-- 				<viewcolumn label="Tipo" width="50px" textalign="right" required="true" maxlength="1" member="ZTVTIPO_TIPO" name="ztvtipoTipo" datatype="Number"> -->
+                    <!-- 				</viewcolumn> -->
+                    <viewcolumn datatype="String" label="Descripción del Tipo" maxlength="100" member="ZTVTIPO_DESC_TIPO" name="ztvtipoDescTipo" required="true" width="500px"/>
+                    <viewcolumn datatype="String" label="Estado" maxlength="1" member="ZTVTIPO_ESTADO" name="ztvtipoEstado" required="true" width="50px">
+                        <editor>
+                            <combobox falsevalue="" name="">
+                                <model>
+                                    <item label="Activo" value="A"/>
+                                    <item label="Inactivo" value="I"/>
+                                </model>
+                            </combobox>
+                        </editor>
+                    </viewcolumn>
+                    <!-- 				<viewcolumn label="Usuario" width="105px" required="true" maxlength="15" member="ZTVTIPO_USUARIO" name="ztvtipoUsuario" datatype="String"> -->
+                    <!-- 				</viewcolumn> -->
+                    <!-- 				<viewcolumn label="Fecha Modificacion" width="150px" required="true" maxlength="1" member="ZTVTIPO_FECHA_MOD" name="ztvtipoFechaMod" datatype="Date"> -->
+                    <!-- 					<editor> -->
+                    <!-- 						<calendar name="" width="100px"  /> -->
+                    <!-- 					</editor> -->
+                    <!-- 				</viewcolumn> -->
+                    <!-- 				<viewcolumn label="Estado S" width="50px" maxlength="1" member="ZTVTIPO_ESTADO_S" name="ztvtipoEstadoS" datatype="String"> -->
+                    <!-- 				</viewcolumn> -->
+                    <!-- 				<viewcolumn label="Mensaje" width="500px" maxlength="2000" member="ZTVTIPO_MENSAJE" name="ztvtipoMensaje" datatype="String"> -->
+                    <!-- 				</viewcolumn> -->
+                </viewheader>
+            </gridview>
+        </collapsiblepanel>
+    </panel>
+</config>
